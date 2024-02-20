@@ -1,18 +1,21 @@
 <h1>income3000</h1>
 
 <% if user_signed_in? %>
-<%= button_to 'sign out', destroy_user_session, method: :delete %>
+<%= button_to 'sign out', destroy_user_session_path, method: :delete %>
 <%else%>
 <%= link_to 'sign in', new_user_session_path %><br />
 <%= link_to 'sign up', new_user_registration_path %>
 <% end %>
 
 <p>you can test the api using the following </p>
+<div className="container">
+	<%= @application.as_json %>
 <ul>
+<li> <%= link_to 'add officer', new_api_v1_officer_url %></li>
+<li> <%= link_to 'officers', api_v1_officers_url %></li>
+<li><%= link_to "API v1 andriod Officers", api_v1_officers_path %></li>
 <li> <%= link_to 'add officer', new_officer_path %></li>
-<li> <%= link_to 'officers', officers_path %></li>
-<li>API v1 andriod books</li>
-
 
 
 </ul>
+</div>
