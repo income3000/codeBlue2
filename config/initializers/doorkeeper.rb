@@ -22,7 +22,7 @@ Doorkeeper.configure do
   # file then you need to declare this block in order to restrict access to the web interface for
   # adding oauth authorized applications. In other case it will return 403 Forbidden response
   # every time somebody will try to access the admin web interface.
-  #
+  allow_blank_redirect_uri true
   # admin_authenticator do
   #   # Put your admin authentication logic here.
   #   # Example implementation:
@@ -297,7 +297,7 @@ Doorkeeper.configure do
   #
   # You can completely disable this feature with:
   #
-  allow_blank_redirect_uri true
+ 
   #
   # Or you can define your custom check:
   #

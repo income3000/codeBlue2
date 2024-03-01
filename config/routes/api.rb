@@ -2,10 +2,15 @@
 
 namespace :api do
 	namespace :v1 do
+		
 		scope :users, module: :users do
 			post '/', to: "registrations#create", as: :user_registration
 		end
-	 resources :officers
+		resources :officers
+
+		namespace :andriod do
+			resources :officers
+		end
 	end
 end 
 

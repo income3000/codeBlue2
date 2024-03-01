@@ -1,10 +1,11 @@
-class Api::V1::OfficersController < ApiController
+class OfficersController < ApplicationController
   before_action :set_officer, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  # before_action :is_admin?
   # GET /officers or /officers.json
   def index
     @officers = Officer.all
-    render json: @officers
+    
   end
 
   # GET /officers/1 or /officers/1.json
