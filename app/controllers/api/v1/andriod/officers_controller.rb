@@ -1,7 +1,7 @@
-class Api::V1::OfficersController < ApplicationController
+class Api::V1::Andriod::OfficersController < ApplicationController
  	include ApplicationHelper
 	before_action :set_officer, only: %i[ show ]
-	skip_before_action :doorkeeper_authorize!
+	# skip_before_action :doorkeeper_authorize!
 	# GET /officers or /officers.json
 	def index
 	  @officers = Officer.all
