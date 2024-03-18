@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Judges</h1>
+
+<div id="judges">
+  <% @judges.each do |judge| %>
+    <%= render judge %>
+    <p>
+      <%= link_to "Show this judge", judge %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New judge", new_judge_path %>

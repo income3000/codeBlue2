@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Das</h1>
+
+<div id="das">
+  <% @das.each do |da| %>
+    <%= render da %>
+    <p>
+      <%= link_to "Show this da", da %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New da", new_da_path %>

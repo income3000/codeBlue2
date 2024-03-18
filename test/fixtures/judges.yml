@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caseNumber: MyString
+  raceOfoffender: MyString
+  judgement: MyString
+  caseSpecifics: MyText
+  feedback: MyString
+  rating: MyString
+
+two:
+  caseNumber: MyString
+  raceOfoffender: MyString
+  judgement: MyString
+  caseSpecifics: MyText
+  feedback: MyString
+  rating: MyString

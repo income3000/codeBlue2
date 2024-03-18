@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @judge %>
+
+<div>
+  <%= link_to "Edit this judge", edit_judge_path(@judge) %> |
+  <%= link_to "Back to judges", judges_path %>
+
+  <%= button_to "Destroy this judge", @judge, method: :delete %>
+</div>

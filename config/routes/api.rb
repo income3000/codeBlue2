@@ -7,9 +7,12 @@ namespace :api do
 			post '/', to: "registrations#create", as: :user_registration
 		end
 		resources :officers
-
+		resources :das
+		resources :judges
 		namespace :andriod do
 			resources :officers
+			resources :das
+			resources :judges
 		end
 	end
 end 
