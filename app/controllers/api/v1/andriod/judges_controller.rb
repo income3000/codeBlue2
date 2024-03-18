@@ -1,6 +1,6 @@
 class Api::V1::Andriod::JudgesController < ApplicationController
 	before_action :set_judge, only: %i[ show ]
-  
+	before_action :authenticate_user!
 	# GET /judges or /judges.json
 	def index
 	  @judges = Judge.all

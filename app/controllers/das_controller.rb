@@ -1,6 +1,6 @@
 class DasController < ApplicationController
 	before_action :set_da, only: %i[ show edit update destroy ]
-  
+	before_action :authenticate_user!
 	# GET /das or /das.json
 	def index
 	  @das = Da.all

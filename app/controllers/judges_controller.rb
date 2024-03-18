@@ -1,6 +1,6 @@
 class JudgesController < ApplicationController
   before_action :set_judge, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!
   # GET /judges or /judges.json
   def index
     @judges = Judge.all

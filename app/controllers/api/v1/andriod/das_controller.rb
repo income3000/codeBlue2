@@ -1,7 +1,7 @@
 
 class Api::V1::Andriod::DasController < ApplicationController
 	before_action :set_da, only: %i[ show  ]
-  
+	before_action :authenticate_user!
 	# GET /das or /das.json
 	def index
 	  @das = Da.all
