@@ -3,6 +3,9 @@
 
 <%# if user is signed in %>
 						<% if user_signed_in? %>
+						<% if current_user.admin? %>
+						<h3>Admin</h3>
+						<%end%>
 
 		<div className="container">
 			<p> you can test the api using the following: </p>

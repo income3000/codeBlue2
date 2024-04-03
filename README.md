@@ -6,4 +6,5 @@ bootstrap
 action text
 faraday
 ransack
+rails admin
 
