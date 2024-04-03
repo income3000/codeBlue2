@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profile/index'
  
   
   root 'pages#home'

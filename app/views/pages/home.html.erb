@@ -1,27 +1,27 @@
 
 
-<h1>income3000</h1>
 
-<% if user_signed_in? %>
-<%# <%= button_to 'sign out', destroy_user_session_path, method: :delete %> 
-<div className="container">
-	<p> you can test the api using the following: </p>
-	<%= @application.as_json %>
-<ul>
-<li> <%= link_to 'add officer', new_officer_path %></li>
-<li> <%= link_to 'officers', officers_path %></li>
-<li><%= link_to "API v1 Officers", api_v1_officers_path %></li>
-<li> <%= link_to 'API v1 andriod officer',  api_v1_andriod_officers_path %></li>
-<li><%= link_to 'API v1 andriod da', api_v1_andriod_das_path %></li>
-<li><%= link_to 'API v1 da', das_path %></li>
-<li><%= link_to 'API v1 andriod Judges', api_v1_andriod_judges_path %> </li>
-<li><%= link_to ' judges', judges_path %></li>
-</ul>
-</div>
+<%# if user is signed in %>
+						<% if user_signed_in? %>
 
-<%else%>
-<%= link_to 'sign in', new_user_session_path %><br />
-<%= link_to 'sign up', new_user_registration_path %>
-<% end %>
+		<div className="container">
+			<p> you can test the api using the following: </p>
+			<%= @application.as_json %>
+<%# html and json links %>
+			<ul> 
+				<li> <%= link_to 'add officer', new_officer_path %></li>
+				<li> <%= link_to 'officers', officers_path %></li>
+				<li> <%= link_to 'API v1 andriod officer',  api_v1_andriod_officers_path %></li>
+				<li><%= link_to 'API v1 andriod da', api_v1_andriod_das_path %></li>
+				<li><%= link_to 'District Attorney', das_path %></li>
+				<li><%= link_to 'API v1 andriod Judges', api_v1_andriod_judges_path %> </li>
+				<li><%= link_to ' judges', judges_path %></li>
+			</ul>
+		</div>
+<%# user can only see this if not logged in %>
+							<%else%>
+		<%= link_to 'sign in', new_user_session_path %><br />
+		<%= link_to 'sign up', new_user_registration_path %>
+							<% end %>
 
 

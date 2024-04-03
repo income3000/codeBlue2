@@ -1,0 +1,8 @@
+<div class="text-center">
+	<% @officers.each do |officer| %>
+	<%= render officer %>
+	<% end %>
+</div>
+<% if @officers.length < 1 %>
+ <h3>no person found </h3>
+<% end %>
