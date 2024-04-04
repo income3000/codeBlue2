@@ -9,10 +9,9 @@ RailsAdmin.config do |config|
   end
   # config.current_user_method(&:current_user)
   # prevent non admin from seeing the admin page
-config.authorize_with do
-  redirect_to main_app.root_path unless current_user.try(:current_user)
-  (:admin)
-end 
+  config.authenticate_with do
+    redirect_to main_app.root_path unless current_user.try(:admin?)
+  end
   ## == CancanCan ==
   # config.authorize_with :cancancan
 
