@@ -1,9 +1,10 @@
 
 
-
+	
 <%# if user is signed in %>
 						<% if user_signed_in? %>
 						<% if current_user.admin? %>
+					
 						<h3>Admin</h3>
 						<%end%>
 
@@ -26,5 +27,7 @@
 		<%= link_to 'sign in', new_user_session_path %><br />
 		<%= link_to 'sign up', new_user_registration_path %>
 							<% end %>
+
+							<%= @user %>
 
 

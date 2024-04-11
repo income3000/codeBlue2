@@ -1,12 +1,12 @@
 class PagesController < ApplicationController
   def home
-    @application = Doorkeeper::Application.first
+  #   @application = codeblue2::Application.first
 
-    @application = {
-      name: @application.name,
-      client_id: @application.uid,
-      client_secret: @application.secret
-    }
+  #   @application = {
+  #     name: @application.name,
+  #     client_id: @application.uid,
+  #     client_secret: @application.secret
+  #   }
   end
  
 end

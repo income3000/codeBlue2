@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'judge_search/index'
+  get 'da_search/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'profile/index'
  

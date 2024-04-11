@@ -1,0 +1,8 @@
+<div class="text-center">
+	<% @judges.each do |judge| %>
+	<%= render judge %>
+	<% end %>
+</div>
+<% if @judges.length < 1 %>
+ <h3>no person found </h3>
+<% end %>

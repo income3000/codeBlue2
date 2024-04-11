@@ -8,3 +8,8 @@ faraday
 ransack
 rails admin
 
+
+
+next steps:
+fix home page admin 
+fix search bar over lap

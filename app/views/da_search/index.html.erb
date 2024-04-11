@@ -1,0 +1,8 @@
+<div class="text-center">
+	<% @das.each do |da| %>
+	<%= render da %>
+	<% end %>
+</div>
+<% if @das.length < 1 %>
+ <h3>no person found </h3>
+<% end %>

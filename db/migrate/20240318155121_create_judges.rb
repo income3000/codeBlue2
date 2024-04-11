@@ -1,6 +1,7 @@
 class CreateJudges < ActiveRecord::Migration[7.0]
   def change
     create_table :judges do |t|
+      t.string :name
       t.string :caseNumber
       t.string :raceOfoffender
       t.string :judgement
