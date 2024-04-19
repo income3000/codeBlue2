@@ -84,3 +84,4 @@ gem 'ransack'
 gem 'rails_admin'
 gem 'sassc-rails'
 
+gem 'omniauth', '~> 2.1', '>= 2.1.2'
