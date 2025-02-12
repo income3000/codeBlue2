@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_03_162225) do
+ActiveRecord::Schema[7.0].define(version: 2025_02_09_054409) do
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -59,7 +59,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_03_162225) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "incidents", force: :cascade do |t|
+    t.string "title"
+    t.text "story"
+    t.string "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "judges", force: :cascade do |t|
+    t.string "name"
     t.string "caseNumber"
     t.string "raceOfoffender"
     t.string "judgement"
@@ -68,7 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_03_162225) do
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
   end
 
   create_table "oauth_access_tokens", force: :cascade do |t|
@@ -104,6 +112,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_03_162225) do
     t.integer "badge"
     t.string "city"
     t.text "incident"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
