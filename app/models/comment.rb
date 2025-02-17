@@ -1,3 +1,4 @@
 class Comment < ApplicationRecord
   belongs_to :incident
-  br
+  broadcasts_to :incident
+end

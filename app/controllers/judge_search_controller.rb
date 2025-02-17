@@ -13,4 +13,4 @@ class JudgeSearchController < ApplicationController
     params[:query]
   end
 
-end
+e

@@ -72,3 +72,4 @@ class OfficersController < ApplicationController
       params.require(:officer).permit(:name, :badge, :city, :incident)
     end
     
+end

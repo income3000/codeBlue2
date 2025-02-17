@@ -69,4 +69,3 @@ class DasController < ApplicationController
 		params.require(:da).permit(:name, :city, :caseNumber, :feedback, :rating)
 	  end
   end
-

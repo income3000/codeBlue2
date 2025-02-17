@@ -1,3 +1,4 @@
 class Incident < ApplicationRecord
   has_many :comments, dependent: :destroy
-  has_
+  has_rich_text :story
+end
