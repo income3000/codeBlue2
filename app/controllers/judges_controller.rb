@@ -10,6 +10,8 @@ class JudgesController < ApplicationController
   def show
   end
 
+  
+
   # GET /judges/new
   def new
     @judge = Judge.new
@@ -67,4 +69,3 @@ class JudgesController < ApplicationController
     def judge_params
       params.require(:judge).permit(:name, :caseNumber, :raceOfoffender, :judgement, :caseSpecifics, :feedback, :rating)
     end
-end

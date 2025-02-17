@@ -10,6 +10,7 @@ class IncidentsController < ApplicationController
   def show
   end
 
+  
   # GET /incidents/new
   def new
     @incident = Incident.new

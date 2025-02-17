@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :incidents
-  resources :blogs
+  
+  resources :incidents do
+    resources :comments
+  end
   
   get 'judge_search/index'
   get 'da_search/index'
@@ -17,5 +19,4 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   draw :api 
   # Defines the root path route ("/")
-  # root "articles#index"
-end
+  # root "articl

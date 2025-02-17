@@ -1,10 +1,12 @@
+<%= turbo_stream_from @incident %>
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @incident %>
+<%= render "incidents/comments", incident: @incident %>
 
 <div>
   <%= link_to "Edit this incident", edit_incident_path(@incident) %> |
   <%= link_to "Back to incidents", incidents_path %>
 
-  <%= button_to "Destroy this incident", @incident, method: :delete %>
-</div>
+  <%= button_to "Destroy this incident", @

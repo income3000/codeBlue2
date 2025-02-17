@@ -12,6 +12,8 @@ class OfficersController < ApplicationController
   def show
   end
 
+  
+
   # GET /officers/new
   def new
     @officer = Officer.new
@@ -70,4 +72,3 @@ class OfficersController < ApplicationController
       params.require(:officer).permit(:name, :badge, :city, :incident)
     end
     
-end
